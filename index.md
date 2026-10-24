@@ -32,4 +32,4 @@ Read more in: [https://github.com/ranggardiana/ranggardiana.github.io/blob/main/
 ## Research & Publications
 
 ### Decision Support System for Forex Trend Prediction (ICITEE)
-Publikasi ilmiah konferensi internasional IEEE bersama peneliti Universitas Gadjah Mada (UGM). Mengembangkan algoritma klasifikasi teknikal untuk pengambilan keputusan otomatis.
+cPublikasi ilmiah konferensi internasional IEEE bersama peneliti Universitas Gadjah Mada (UGM). Mengembangkan algoritma klasifikasi teknikal untuk pengambilan keputusan otomatis.
