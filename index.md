@@ -31,4 +31,4 @@ In high and mix, custom manufacturing environments, such as architectural alumin
 ## Research & Publications
 
 ### Decision Support System for Forex Trend Prediction (ICITEE)
-cPublikasi ilmiah konferensi internasional IEEE bersama peneliti Universitas Gadjah Mada (UGM). Mengembangkan algoritma klasifikasi teknikal untuk pengambilan keputusan otomatis.
+Publikasi ilmiah konferensi internasional IEEE bersama peneliti Universitas Gadjah Mada (UGM). Mengembangkan algoritma klasifikasi teknikal untuk pengambilan keputusan otomatis.
