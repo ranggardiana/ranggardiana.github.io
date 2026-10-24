@@ -15,15 +15,25 @@
 
 **Context:** Independent Engineering & Systems Architecture Project (Inspired by Industry Experience in Precision Manufacturing)
 
+---
+
+Based on my work experience, a static bom from an excel file or spreadsheet usually erodes custom-made manufacturing projects.
+Raw material prices often fluctuate up and down in the middle of processing an order.
+A quotation can just become irrelevant so that once the goods are shipped, the expected margin of around 20% might not be achieved.
+
+Relying on recursive queries directly on the active production data table will not survive at scale. This method directly locks production records.
+So i think that there should be a solution. The solution is a Directed Acyclic Graph (DAG). The computer quietly calculates prices in real time so that if there are price changes, we can carry out a rescue mission much faster.
+
+---
+
 ## Executive Summary
 
-For high mix, custom fabricators, particularly in architectural aluminum or custom assemblies, margin slippage occurs well before work hits the shop floor. What appears as operational inefficiency during final assembly is almost always locked in during commercial estimation.
+For high mix custom manufacturers, margin leakage already happens before the work comes in, so often the factory actually loses money due to miscalculation.
+This happens because
 
-In practice, this variance between baseline quotation and realized production cost tracks back to three structural defects:
-
-1. **Statically coupled, manual Bill of Materials (BOM) breakdowns** unable to resolve parametric variations in real time.
-2. **Unaccounted non-linear scrap and yield shrinkage factors** across recursive parent-child assembly tiers.
-3. **Latent propagation of fluctuating raw material market indices** and machine work-center operational overheads.
+1. The records are manual and rigid.
+2. Forgot to count the wasted remaining resources
+3. Late to know that material prices have already gone up
    
 ![BOM Breakdown Screenshot](https://raw.githubusercontent.com/ranggardiana/ranggardiana.github.io/main/assets/img/bom-screenshot.png)
 
