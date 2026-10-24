@@ -35,8 +35,30 @@ Among the most persistent friction points in modern interpersonal relationships 
 
 When I asks, *"Mau makan apa?"*, and my GF responds with *"Terserah"* (Whatever), classical logic assumes an open, unconstrained solution space. In practice, however, *"Terserah"* acts as an unvoiced rejection filter:
 
-$$
-\forall x \in \text{Suggestions}(A), \quad \text{Probability}(B \text{ accepts } x) \to 0
-$$
+<p data-sourcepos="38:1-40:2" dir="auto" style="text-align: center;">
+  <math-renderer class="js-display-math" style="display: block; text-align: center;" data-run-id="7c5a276762474ebbb9f5dcdc855ec221" data-catalyst="">
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mi mathvariant="normal">∀</mi>
+      <mi>x</mi>
+      <mo>∈</mo>
+      <mtext>Suggestions</mtext>
+      <mo stretchy="false">(</mo>
+      <mi>A</mi>
+      <mo stretchy="false">)</mo>
+      <mo>,</mo>
+      <mstyle>
+        <mspace width="1em"></mspace>
+      </mstyle>
+      <mtext>Probability</mtext>
+      <mo stretchy="false">(</mo>
+      <mi>B</mi>
+      <mtext>&nbsp;accepts&nbsp;</mtext>
+      <mi>x</mi>
+      <mo stretchy="false">)</mo>
+      <mo accent="false" stretchy="false">→</mo>
+      <mn>0</mn>
+    </math>
+  </math-renderer>
+</p>
 
 This paper explores the root psychological mechanics of this deadlock (Decision Paralysis, Risk Externalization, and Asymmetric Vetoes) and presents **TerserahSolver**: a lightweight, web-based bilateral blind swipe consensus engine. By combining anonymous zero-knowledge card mechanics, synchronous state matching, and hard-stop fallback arbitrators, this architecture eliminates relationship friction and delivers dinner resolutions in under 90 seconds.
