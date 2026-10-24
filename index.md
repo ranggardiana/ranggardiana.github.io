@@ -1,3 +1,4 @@
+[Resume (PDF)](https://linkedin.com) | [LinkedIn](https://linkedin.com) | [Medium](https://medium.com/@ranggardiana)
 # Portfolio
 
 1. [Business Research](#business-research)
