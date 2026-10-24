@@ -38,6 +38,7 @@ This happens because
 ![BOM Breakdown Screenshot](https://raw.githubusercontent.com/ranggardiana/ranggardiana.github.io/main/assets/img/bom-screenshot.png)
 
 [![Read More](https://img.shields.io/badge/read-more-brightgreen?style=for-the-badge)](https://github.com/ranggardiana/ranggardiana.github.io/blob/main/blogs/engineering-scalable-multi-level.md)
+
 ---
 
 ## Self Mini Project
