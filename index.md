@@ -7,7 +7,7 @@
 
 ## Business Research
 
-## Engineering Scalable Multi-Level BOM Architectures: Relational Data Modeling and Dynamic Cost Roll-Up Algorithms for Custom Manufacturing
+## Real Time Cost Rollup for Custom Manufacturing BOMs
 
 **Author:** Ardiana Rangga
 
