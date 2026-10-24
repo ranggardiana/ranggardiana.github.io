@@ -54,7 +54,7 @@ With this method, the hope is that even if the component structure goes up to 8 
 
 ## 1. The Engineering & Commercial Dilemma: Margin Leakage in Custom Order Lifecycles
 
-In standard Make-to-Stock (MTS) paradigms, BOM structures remain relatively static. Engineering changes occur via formal engineering change orders (ECO) with predictable planning cadences. Conversely, in Configure-to-Order (CTO) and Engineer-to-Order (ETO) models, each incoming quote introduces dimensional, structural, or metallurgical parametric deviations:
+Unlike Mass-Production Factories (Make-to-Stock), their BOM never changes because the production is always the same. While for Custom Order Goods (cto & eto) every time an order comes in, it has to be recalculated because its bom is definitely unique:
 
 $$
 \vec{P}_{\text{order}} = \{ \text{profile\_gauge}, \text{alloy\_grade}, \text{anodizing\_microns}, \text{custom\_length}, \text{hardware\_matrix} \}
