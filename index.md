@@ -31,9 +31,9 @@ In high and mix, custom manufacturing environments, such as architectural alumin
 ## Self Mini Project
 
 ### Solving the "Terserah" Paradoxfor Date-Night Decision Deadlock
-Among the most persistent friction points in modern interpersonal relationships is the dinner selection deadlock—colloquially termed in Indonesian dating culture as the **"Terserah" Paradox**.
+Among the most persistent friction points in modern interpersonal relationships is the dinner selection deadlock in Indonesian dating culture as the **"Terserah" Paradox**.
 
-When Party A asks, *"Mau makan apa?"*, and Party B responds with *"Terserah"* (Whatever), classical logic assumes an open, unconstrained solution space. In practice, however, *"Terserah"* acts as an unvoiced rejection filter:
+When I asks, *"Mau makan apa?"*, and my GF responds with *"Terserah"* (Whatever), classical logic assumes an open, unconstrained solution space. In practice, however, *"Terserah"* acts as an unvoiced rejection filter:
 
 $$
 \forall x \in \text{Suggestions}(A), \quad \text{Probability}(B \text{ accepts } x) \to 0
