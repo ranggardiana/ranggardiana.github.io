@@ -25,7 +25,6 @@ In high and mix, custom manufacturing environments, such as architectural alumin
    
 ![BOM Breakdown Screenshot](https://raw.githubusercontent.com/ranggardiana/ranggardiana.github.io/main/assets/img/bom-screenshot.png)
 
-
 <p>
   <a href="https://github.com/ranggardiana/ranggardiana.github.io/blob/main/index.md">Read more...</a>
 </p>
