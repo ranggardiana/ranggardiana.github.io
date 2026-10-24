@@ -17,7 +17,9 @@
 
 ## Executive Summary
 
-In high and mix, custom manufacturing environments, such as architectural aluminum fabrication, automotive assemblies, and engineered building envelopes profit margin degradation predominantly originates at the quoting stage. The divergence between estimated costs and actual shop-floor realization stems from three root factors:
+For high mix, custom fabricators, particularly in architectural aluminum or custom assemblies, margin slippage occurs well before work hits the shop floor. What appears as operational inefficiency during final assembly is almost always locked in during commercial estimation.
+
+In practice, this variance between baseline quotation and realized production cost tracks back to three structural defects:
 
 1. **Statically coupled, manual Bill of Materials (BOM) breakdowns** unable to resolve parametric variations in real time.
 2. **Unaccounted non-linear scrap and yield shrinkage factors** across recursive parent-child assembly tiers.
