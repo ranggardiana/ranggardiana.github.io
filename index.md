@@ -25,9 +25,7 @@ In high and mix, custom manufacturing environments, such as architectural alumin
    
 ![BOM Breakdown Screenshot](https://raw.githubusercontent.com/ranggardiana/ranggardiana.github.io/main/assets/img/bom-screenshot.png)
 
-<p style="margin-top: 20px;">
-  <a href="https://github.com/ranggardiana/ranggardiana.github.io/blob/main/index.md" target="_blank" rel="noopener noreferrer">Read more...</a>
-</p>
+[Read more...](https://github.com/ranggardiana/ranggardiana.github.io/blob/main/blogs/engineering-scalable-multi-level.md)
 
 ---
 
