@@ -417,7 +417,7 @@ flowchart TD
 Custom configurations are transformed into an MD5/SHA256 topological fingerprint based on sorted component IDs, cut lengths, and operations:
 
 $$
-\mathcal{H} = \text{Hash}\left(\bigcup_{i=1}^{n} \{\text{item\_id}_i, \text{qty}_i, \text{work\_center}_i\}\right)
+\mathcal{H} = \text{Hash}\left(\bigcup_{i=1}^{n} \{\text{item\\_id}_i, \text{qty}_i, \text{work\\_center}_i\}\right)
 $$
 
 If $\mathcal{H}$ exists in the cache, the structural traversal is bypassed entirely. The system re-evaluates only raw material price vectors and work-center overheads against the cached lineage tree.
@@ -458,7 +458,7 @@ The implementation of automated multi-level BOM decomposition and dynamic cost r
 Custom orders with low unit volumes frequently consume disproportionately high machine changeover and tool setup times. By dynamically amortizing setup hours over exact requested lot sizes:
 
 $$
-C_{\text{setup\_unit}} = \frac{T_{\text{setup}}}{Q_{\text{order}}} \times R_{\text{rate}}
+C_{\text{setup\\_unit}} = \frac{T_{\text{setup}}}{Q_{\text{order}}} \times R_{\text{rate}}
 $$
 
 Small-batch orders are prevented from amortizing on assumed standard production lot sizes, systematically eliminating hidden shop-floor underpricing.
