@@ -8,25 +8,23 @@
 
 ---
 
-In my Experience, static BOMs and spreadsheets bleed margins on custom manufacturing jobs. Raw material prices spike mid-order. Quoted numbers stop making sense fast. By delivery, your projected 20% margin is gone.
+Based on my work experience, a static bom from an excel file or spreadsheet usually erodes custom-made manufacturing projects.
+Raw material prices often fluctuate up and down in the middle of processing an order.
+A quotation can just become irrelevant so that once the goods are shipped, the expected margin of around 20% might not be achieved.
 
-Recursive queries on live tables will not scale here. They lock up production records immediately.
+relying on recursive queries directly on the active production data table will not survive at scale. This method directly locks production records.
 
-Instead, model the assemblies as a Directed Acyclic Graph (DAG). Then, offload the recalculation to an asynchronous worker. Cost roll-ups update cleanly in the background. Active production tables stay completely unlocked.
-
-Let’s get into the technical architecture.
-
+so i think that there should be a solution. the solution is a Directed Acyclic Graph (DAG). the computer quietly calculates prices in real time so that if there are price changes, we can carry out a rescue mission much faster.
 ---
 
 ## Executive Summary
 
-For high mix, custom fabricators, particularly in architectural aluminum or custom assemblies, margin slippage occurs well before work hits the shop floor. What appears as operational inefficiency during final assembly is almost always locked in during commercial estimation.
+For high mix custom manufacturers, margin leakage already happens before the work comes in, so often the factory actually loses money due to miscalculation.
+this happens because
 
-In practice, this variance between baseline quotation and realized production cost tracks back to three structural defects:
-
-1. **Statically coupled, manual Bill of Materials (BOM) breakdowns** unable to resolve parametric variations in real time.
-2. **Unaccounted non-linear scrap and yield shrinkage factors** across recursive parent-child assembly tiers.
-3. **Latent propagation of fluctuating raw material market indices** and machine work-center operational overheads.
+1. The records are manual and rigid.
+2. Forgot to count the wasted remaining resources
+3. Late to know that material prices have already gone up
 
 ```mermaid
 mindmap
