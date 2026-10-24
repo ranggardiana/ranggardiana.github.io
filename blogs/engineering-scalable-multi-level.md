@@ -12,15 +12,15 @@ Based on my work experience, a static bom from an excel file or spreadsheet usua
 Raw material prices often fluctuate up and down in the middle of processing an order.
 A quotation can just become irrelevant so that once the goods are shipped, the expected margin of around 20% might not be achieved.
 
-relying on recursive queries directly on the active production data table will not survive at scale. This method directly locks production records.
+Relying on recursive queries directly on the active production data table will not survive at scale. This method directly locks production records.
+So i think that there should be a solution. The solution is a Directed Acyclic Graph (DAG). The computer quietly calculates prices in real time so that if there are price changes, we can carry out a rescue mission much faster.
 
-so i think that there should be a solution. the solution is a Directed Acyclic Graph (DAG). the computer quietly calculates prices in real time so that if there are price changes, we can carry out a rescue mission much faster.
 ---
 
 ## Executive Summary
 
 For high mix custom manufacturers, margin leakage already happens before the work comes in, so often the factory actually loses money due to miscalculation.
-this happens because
+This happens because
 
 1. The records are manual and rigid.
 2. Forgot to count the wasted remaining resources
