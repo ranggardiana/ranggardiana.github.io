@@ -1,1 +1,18 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Sembunyikan tombol View My GitHub Profile */
+
+/*header ul,
+header .buttons,
+a[href*="github.com"] {
+  display: none !important;
+}*/
+
+/* Sembunyikan footer kredit bawaan */
+footer {
+  display: none !important;
+}
 
