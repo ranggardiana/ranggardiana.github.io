@@ -119,22 +119,22 @@ graph TD
     SA2["Sub-Assembly 2: Extruded Outer Frame (SA-202)"]
     HW["Purchased Part: Multi-Point Lock Set (HW-05)"]
     
-    FG -->|qty: 1.0, scrap: 0%| SA1
-    FG -->|qty: 1.0, scrap: 0%| SA2
-    FG -->|qty: 2.0, scrap: 2%| HW
+    FG -->|"qty: 1.0, scrap: 0%"| SA1
+    FG -->|"qty: 1.0, scrap: 0%"| SA2
+    FG -->|"qty: 2.0, scrap: 2%"| HW
     
     RM1["Raw Material: Double-Glazed IGU Glass Panel (RM-GL)"]
     RM2["Raw Material: EPDM Gasket Seal (RM-GK)"]
-    SA1 -->|qty: 1.0, scrap: 3%| RM1
-    SA1 -->|qty: 4.8m, scrap: 5%| RM2
+    SA1 -->|"qty: 1.0, scrap: 3%"| RM1
+    SA1 -->|"qty: 4.8m, scrap: 5%"| RM2
     
     SA3["Sub-Assembly 3: Miter-Cut Profile Kit (SA-303)"]
     COR["Purchased Part: Zinc Corner Cleat (HW-CC)"]
-    SA2 -->|qty: 1.0, scrap: 2%| SA3
-    SA2 -->|qty: 4.0, scrap: 0%| COR
+    SA2 -->|"qty: 1.0, scrap: 2%"| SA3
+    SA2 -->|"qty: 4.0, scrap: 0%"| COR
     
     RM3["Raw Material: Extruded Al Billet 6063-T6 (RM-AL)"]
-    SA3 -->|qty: 14.2kg, scrap: 12% (Drop Loss)| RM3
+    SA3 -->|"qty: 14.2kg, scrap: 12% (Drop Loss)"| RM3
 
     classDef fg fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px;
     classDef sa fill:#fef3c7,stroke:#d97706,stroke-width:1.5px;
