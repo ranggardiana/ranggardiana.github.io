@@ -8,7 +8,7 @@
 
 ---
 
-Hey there! If you have ever set foot inside an enterprise manufacturing plant—or sat through the nerve-wracking process of pricing a complex, custom-engineered product—you know the sheer panic that a tiny miscalculation can cause.
+Hey there! If you have ever set foot inside an enterprise manufacturing plant—or sat through the nerve-wracking process of pricing a complex, custom engineered product you know the sheer panic that a tiny miscalculation can cause.
 
 A while back, during my tenure working closely with large scale manufacturing systems, I encountered a recurring dilemma: a client would order a heavily customized architectural assembly, our sales team would scramble to quote a competitive price, and weeks later the factory floor would discover that we barely broke even or worse, took a loss. The culprit wasn't bad salesmanship or sloppy shop floor labor; it was the way data was structured. The multi level Bill of Materials (BOM) was static, scrap rates were guessed, and machine setup rates were modeled on rigid spreadsheets that lagged behind volatile raw material indices.
 
