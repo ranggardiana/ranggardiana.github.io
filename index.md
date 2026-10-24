@@ -1,21 +1,29 @@
 # Portfolio
 
-1. [Product Management](#product-management)
+1. [Business Data](#business-data)
 2. [Research & Publications](#research--publications)
 
 ---
 
-## Product Management
+## Business Data
 
-### JALA Tech — IoT & Shrimp Farming Management Platform
-*Product Manager (2022 - Sekarang)*
+## Engineering Scalable Multi-Level BOM Architectures: Relational Data Modeling and Dynamic Cost Roll-Up Algorithms for Custom Manufacturing
 
-Memimpin pengembangan fitur manajemen tambak dan integrasi data sensor IoT untuk ribuan petambak udang di Indonesia.
+**Author:** Ardiana Rangga
 
-* **Problem:** Petambak kesulitan memantau kualitas air tambak secara berkala dan sering mengalami keterlambatan penanganan penyakit udang.
-* **Solution:** Merancang alur pemantauan otomatis berbasis data sensor IoT dan dasbor analitik terpusat.
-* **Impact:** Meningkatkan adopsi pengguna aktif harian sebesar 25% dan mempercepat respons penanganan kualitas air.
+**Topic:** Enterprise Data Modeling, Production Systems Architecture & Supply Chain Engineering
 
+**Context:** Independent Engineering & Systems Architecture Project (Inspired by Industry Experience in Precision Manufacturing)
+
+## Executive Summary
+
+In high-mix, custom manufacturing environments—such as architectural aluminum fabrication, automotive assemblies, and engineered building envelopes—profit margin degradation predominantly originates at the quoting stage. The divergence between estimated costs and actual shop-floor realization stems from three root factors:
+
+1. **Statically coupled, manual Bill of Materials (BOM) breakdowns** unable to resolve parametric variations in real time.
+2. **Unaccounted non-linear scrap and yield shrinkage factors** across recursive parent-child assembly tiers.
+3. **Latent propagation of fluctuating raw material market indices** and machine work-center operational overheads.
+   
+![BOM Breakdown Screenshot](https://raw.githubusercontent.com/ranggardiana/ranggardiana.github.io/main/assets/img/bom-screenshot.png)
 ---
 
 ## Research & Publications
