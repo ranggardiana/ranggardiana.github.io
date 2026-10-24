@@ -1,11 +1,11 @@
 # Portfolio
 
-1. [Business Data](#business-data)
+1. [Engineering Scalable Multi-Level BOM Architectures:](#engineering-scalable-multi-Level-bom-architectures)
 2. [Research & Publications](#research--publications)
 
 ---
 
-## Business Data
+## Engineering Scalable Multi-Level BOM Architectures:
 
 ## Engineering Scalable Multi-Level BOM Architectures: Relational Data Modeling and Dynamic Cost Roll-Up Algorithms for Custom Manufacturing
 
@@ -25,7 +25,7 @@ In high and mix, custom manufacturing environments, such as architectural alumin
    
 ![BOM Breakdown Screenshot](https://raw.githubusercontent.com/ranggardiana/ranggardiana.github.io/main/assets/img/bom-screenshot.png)
 
-read more...
+[Read more...](https://github.com/ranggardiana/ranggardiana.github.io/blob/main/index.md)
 
 
 ---
