@@ -1,11 +1,11 @@
 # Portfolio
 
-1. [Engineering Scalable Multi-Level BOM Architectures:](#engineering-scalable-multi-Level-bom-architectures)
+1. [Business Research](#business-research)
 2. [Research & Publications](#research--publications)
 
 ---
 
-## Engineering Scalable Multi-Level BOM Architectures:
+## Business Research
 
 ## Engineering Scalable Multi-Level BOM Architectures: Relational Data Modeling and Dynamic Cost Roll-Up Algorithms for Custom Manufacturing
 
