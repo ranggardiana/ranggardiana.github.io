@@ -8,13 +8,11 @@
 
 ---
 
-## A Quick Personal Note Before We Dive In
-
 Hey there! If you have ever set foot inside an enterprise manufacturing plant—or sat through the nerve-wracking process of pricing a complex, custom-engineered product—you know the sheer panic that a tiny miscalculation can cause.
 
-A while back, during my tenure working closely with large-scale manufacturing systems, I encountered a recurring dilemma: a client would order a heavily customized architectural assembly, our sales team would scramble to quote a competitive price, and weeks later the factory floor would discover that we barely broke even—or worse, took a loss. The culprit wasn't bad salesmanship or sloppy shop-floor labor; it was the way data was structured. The multi-level Bill of Materials (BOM) was static, scrap rates were guessed, and machine setup rates were modeled on rigid spreadsheets that lagged behind volatile raw material indices.
+A while back, during my tenure working closely with large scale manufacturing systems, I encountered a recurring dilemma: a client would order a heavily customized architectural assembly, our sales team would scramble to quote a competitive price, and weeks later the factory floor would discover that we barely broke even or worse, took a loss. The culprit wasn't bad salesmanship or sloppy shop floor labor; it was the way data was structured. The multi level Bill of Materials (BOM) was static, scrap rates were guessed, and machine setup rates were modeled on rigid spreadsheets that lagged behind volatile raw material indices.
 
-That persistent operational bottleneck stayed with me. As a personal engineering project, I set out to formalize how this problem should be solved at the architectural data level. What follows is a comprehensive, deep-dive technical paper: from representing hierarchical assemblies as Directed Acyclic Graphs (DAG) in relational databases to engineering an asynchronous, post-order dynamic cost roll-up engine that delivers sub-second pricing without locking production tables.
+That persistent operational bottleneck stayed with me. As a personal engineering project, I set out to formalize how this problem should be solved at the architectural data level. What follows is a comprehensive, deep dive technical paper: from representing hierarchical assemblies as Directed Acyclic Graphs (DAG) in relational databases to engineering an asynchronous, post-order dynamic cost roll up engine that delivers sub-second pricing without locking production tables.
 
 Let’s get into the technical architecture.
 
@@ -22,7 +20,7 @@ Let’s get into the technical architecture.
 
 ## Executive Summary
 
-In high-mix, custom manufacturing environments—such as architectural aluminum fabrication, automotive assemblies, and engineered building envelopes—profit margin degradation predominantly originates at the quoting stage. The divergence between estimated costs and actual shop-floor realization stems from three root factors:
+In high and mix, custom manufacturing environments, such as architectural aluminum fabrication, automotive assemblies, and engineered building envelopes profit margin degradation predominantly originates at the quoting stage. The divergence between estimated costs and actual shop-floor realization stems from three root factors:
 
 1. **Statically coupled, manual Bill of Materials (BOM) breakdowns** unable to resolve parametric variations in real time.
 2. **Unaccounted non-linear scrap and yield shrinkage factors** across recursive parent-child assembly tiers.
