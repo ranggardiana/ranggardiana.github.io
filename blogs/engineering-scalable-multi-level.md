@@ -43,9 +43,12 @@ mindmap
       Work Center Queue Shifts
 ```
 
-This paper formalizes an enterprise-grade data architecture and algorithmic framework designed to automate multi-level BOM decomposition and dynamic margin calculation in real time. We formulate the hierarchical BOM structure as a Directed Acyclic Graph (DAG) implemented via optimized relational database paradigms (Adjacency Lists combined with Lineage Transitive closures).
+We organize the parts breakdown as a clean family tree without circular loops.
+So instead of making an ordinary database that is slow, i propose mapping the relationships between components as a DAG so that the relationship between parts is clear, ordered, and not back-and-forth.
 
-Furthermore, we present an asynchronous, bottom-up post-order traversal algorithm that evaluates material consumption, scrap variances, dynamic work-center routing costs, and overhead allocation vectors. The resulting architecture ensures sub-second quoting response times ($<250\text{ ms}$ for $N \ge 8$ hierarchy depths) while eliminating underpricing risks and insulating enterprise contribution margins.
+For the calculation method, we can use bottom-up post order. The system calculates the costs in order from the smallest first
+
+With this method, the hope is that even if the component structure goes up to 8 levels down, the price can come out in an instant (under 0.25 seconds). ($<250\text{ ms}$ for $N \ge 8$ hierarchy depths).
 
 ---
 
