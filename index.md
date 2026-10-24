@@ -1,12 +1,9 @@
 # Portfolio
 
-1. [Business Research](#business-research)
+1. [Business Research: Real Time Cost Rollup for Custom Manufacturing BOMs](#real-time-cost-rollup-for-custom-manufacturing-boms)
 2. [Self Mini Project: "Terserah" Date-Night Decision](#self-mini-project)
 
 ---
-
-## Business Research
-
 ## Real Time Cost Rollup for Custom Manufacturing BOMs
 
 **Author:** Ardiana Rangga
