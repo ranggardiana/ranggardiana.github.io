@@ -57,7 +57,7 @@ With this method, the hope is that even if the component structure goes up to 8 
 Unlike Mass-Production Factories (Make-to-Stock), their BOM never changes because the production is always the same. While for Custom Order Goods (cto & eto) every time an order comes in, it has to be recalculated because its bom is definitely unique:
 
 $$
-\vec{P}_{\text{order}} = \{ \text{profile\_gauge}, \text{alloy\_grade}, \text{anodizing\_microns}, \text{custom\_length}, \text{hardware\_matrix} \}
+\vec{P}_{\text{order}} = \{ \text{profile\\_gauge}, \text{alloy\\_grade}, \text{anodizing\\_microns}, \text{custom\\_length}, \text{hardware\\_matrix} \}
 $$
 
 Traditional Enterprise Resource Planning (ERP) rollouts handle this via two deeply compromised modalities:
