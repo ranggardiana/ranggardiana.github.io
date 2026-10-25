@@ -44,7 +44,7 @@ mindmap
 ```
 
 We organize the parts breakdown as a clean family tree without circular loops.
-So instead of making an ordinary database that is slow, i propose mapping the relationships between components as a DAG so that the relationship between parts is clear, ordered, and not back-and-forth.
+So instead of making an ordinary database that is slow, I propose mapping the relationships between components as a DAG so that the relationship between parts is clear, ordered, and not back-and-forth.
 
 For the calculation method, we can use bottom-up post order. The system calculates the costs in order from the smallest first
 
@@ -54,13 +54,13 @@ With this method, the hope is that even if the component structure goes up to 8 
 
 ## 1. The Engineering & Commercial Dilemma: Margin Leakage in Custom Order Lifecycles
 
-Unlike Mass-Production Factories (Make-to-Stock), their BOM never changes because the production is always the same. While for Custom Order Goods (cto & eto) every time an order comes in, it has to be recalculated because its bom is definitely unique:
+Unlike Mass-Production Factories (Make-to-Stock), their BOM never changes because the production is always the same. While for Custom Order Goods (CTO & ETO) every time an order comes in, it has to be recalculated because its bom is definitely unique:
 
 $$
 \vec{P}_{\text{order}} = \{ \text{profile\\_gauge}, \text{alloy\\_grade}, \text{anodizing\\_microns}, \text{custom\\_length}, \text{hardware\\_matrix} \}
 $$
 
-Traditional Enterprise Resource Planning (ERP) rollouts handle this via two deeply compromised modalities:
+Usually, traditional ERP does one of the two following:
 
 ```mermaid
 flowchart TD
