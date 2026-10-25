@@ -83,21 +83,23 @@ flowchart TD
 
 ### Manifestation of Margin Erosion
 
-When an estimation engineer manually compiles custom specifications into legacy ERP entries:
+The Estimating Engineer / Estimating Staff team usually makes mistakes that cause losses.
 
-* **Scrap Non-Linearity:** Raw material loss during cutting, milling, and extrusion processes is rarely proportional. A $2.1\text{ m}$ custom profile cut from a standard $6.0\text{ m}$ billet incurs an effective kerf and drop scrap of $30\%$, unless nested across parallel order queues.
-* **Variable Work-Center Overhead:** Multi-stage manufacturing routing (extrusion $\rightarrow$ precision machining $\rightarrow$ surface anodizing $\rightarrow$ assembly $\rightarrow$ QA) applies variable labor and machine hourly rates. These variations depend on batch lot sizes and machine center run queues.
-* **Price Escalation Lag:** In volatile raw material markets (e.g., LME Aluminum settlement rates), an uncommitted quotation based on 14-day-old inventory moving average prices risks immediate negative gross margins upon contract award.
+1. Cost from offcuts or drop scrap
+2. Machine or labor costs as fixed costs
+3. Market prices change beforehand
 
 ---
 
 ## 2. Structural Topology & Relational Schema Modeling
 
-A Bill of Materials for complex assemblies exhibits the mathematical properties of a **Directed Acyclic Graph (DAG)**, where nodes denote materials, intermediate sub-assemblies, and finished assemblies, while edges denote directed dependencies parameterized by consumption coefficients.
+The arrangement structure of goods (Bill of Materials) is actually similar to a one-way family pedigree tree (DAG).
+- Where the node represents the raw material / mill finish / finished good
+- The arrow indicates which part is assembled where, complete with the quantity of material required, so there must be no looping in the process
 
 ### 2.1 Graph Formulation & Visual Topology
 
-Let the BOM be defined as a directed graph $G = (V, E)$, where:
+THe BOM be defined as a directed graph $G = (V, E)$, where:
 
 * $V = \{v_1, v_2, \dots, v_n\}$ represents the set of inventory entities (raw items, purchased parts, fabricated sub-assemblies, finished goods).
 * $E = \{(u, v) \in V \times V\}$ represents the directed edge indicating that component $v$ is a direct child required to construct parent $u$.
