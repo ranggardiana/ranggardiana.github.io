@@ -418,17 +418,18 @@ flowchart TD
 
 ### 1. Structural Hash Keying
 
-Custom configurations are transformed into an MD5/SHA256 topological fingerprint based on sorted component IDs, cut lengths, and operations:
+So the computer does not need to recalculate the exact same product arrangement, we create a procedure with a unique code for each combined custom-order part.
+The code is generated from a combination of the parts list, cut dimensions, and machine routing that can be reused.
 
 $$
 \mathcal{H} = \text{Hash}\left(\bigcup_{i=1}^{n} \{\text{item\\_id}_i, \text{qty}_i, \text{work\\_center}_i\}\right)
 $$
 
-If $\mathcal{H}$ exists in the cache, the structural traversal is bypassed entirely. The system re-evaluates only raw material price vectors and work-center overheads against the cached lineage tree.
+If $\mathcal{H}$ exists in the cache, the structural traversal is bypassed entirely. The system takes the stored parts tree and updates it with the latest material prices.
 
 ### 2. Quotation State Transition Machine
 
-To guarantee that commercial commitments cannot be invalidated by concurrent background pricing updates:
+To avoid a situation where we are about to close a deal and the total price suddenly changes on its own, the solution is that we need status rules (draft > quoted > approved).
 
 ```mermaid
 stateDiagram-v2
@@ -448,7 +449,7 @@ stateDiagram-v2
 
 ## 5. Industrial Synthesis & Business Impact
 
-The implementation of automated multi-level BOM decomposition and dynamic cost roll-up delivers substantial measurable outcomes across high-precision manufacturing environments:
+If we calculate from the smallest parts, we can derive the business impact as shown in the following table:
 
 | Evaluation Metric | Manual / Legacy Modality | Automated Algorithmic Engine |
 | :--- | :--- | :--- |
@@ -459,22 +460,22 @@ The implementation of automated multi-level BOM decomposition and dynamic cost r
 
 ### 5.1 Elimination of Underpricing Hazards
 
-Custom orders with low unit volumes frequently consume disproportionately high machine changeover and tool setup times. By dynamically amortizing setup hours over exact requested lot sizes:
+Preparation for low volume custom product  manufacturing also needs to be calculated, as this usually takes more time.
 
 $$
 C_{\text{setup\\_unit}} = \frac{T_{\text{setup}}}{Q_{\text{order}}} \times R_{\text{rate}}
 $$
 
-Small-batch orders are prevented from amortizing on assumed standard production lot sizes, systematically eliminating hidden shop-floor underpricing.
+So small-volume orders will be calculated using a different formula than mass-production orders.
 
 ### 5.2 Decoupled Estimation and Production Revisions
 
-By snapshotting the evaluated BOM state along with underlying cost matrices directly into the quotation artifact, commercial agreements are fully insulated from downstream revisions. If raw material costs surge during the customer's approval cycle, the quote engine flags expired validity intervals before order conversion, safeguarding gross margins.
+When a quotation is created, the system will take a snapshot of the part calculation running at that time, regardless of past prices or future prices.
 
 ---
 
 ## 6. Conclusion
 
-Dynamic cost estimation in custom, Engineer-to-Order manufacturing is fundamentally a data modeling challenge. By modeling complex assembly configurations as Directed Acyclic Graphs backed by hybrid relational closures, enterprises can eliminate the traditional compromise between algorithmic depth and query throughput.
+Cost calculations in custom manufacturing are actually not a math problem, but a data structure organization problem in the database.
 
-This architectural framework decouples volatile commercial inputs (raw material indices, custom geometries, labor rates) from static master records. The result is a resilient, sub-second estimation engine that protects gross margins, accelerates quote-to-order velocities, and provides a dependable foundation for mission-critical enterprise manufacturing operations.
+If we map the structure like a one-way DAG and calculate it in a dedicated engine, the hope is that the results will be more flexible and aligned with real costs on the ground.
