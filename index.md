@@ -5,13 +5,6 @@
 
 ---
 ## Real Time Cost Rollup for Custom Manufacturing BOMs
-
-**Author:** Ardiana Rangga
-
-**Topic:** Enterprise Data Modeling, Production Systems Architecture & Supply Chain Engineering
-
-**Context:** Independent Engineering & Systems Architecture Project (Inspired by Industry Experience in Precision Manufacturing)
-
 ---
 
 Based on my work experience, a static bom from an excel file or spreadsheet usually erodes custom-made manufacturing projects.
