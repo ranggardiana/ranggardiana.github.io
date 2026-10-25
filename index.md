@@ -74,5 +74,3 @@ Or in mathematical terms:
     </math>
   </math-renderer>
 </p>
-
-This paper explores the root psychological mechanics of this deadlock (Decision Paralysis, Risk Externalization, and Asymmetric Vetoes) and presents **TerserahSolver**: a lightweight, web-based bilateral blind swipe consensus engine. By combining anonymous zero-knowledge card mechanics, synchronous state matching, and hard-stop fallback arbitrators, this architecture eliminates relationship friction and delivers dinner resolutions in under 90 seconds.
