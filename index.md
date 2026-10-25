@@ -41,9 +41,13 @@ This happens because
 ## Self Mini Project
 
 ### Solving the "Terserah" Paradoxfor Date-Night Decision Deadlock
-Among the most persistent friction points in modern interpersonal relationships is the dinner selection deadlock in Indonesian dating culture as the **"Terserah" Paradox**.
+WELCOME TO HACKTOBER FEST YEAY!!
+In Indonesian dating culture, there is the "Terserah" Paradox.
+So basically, I ask my girlfriend, what do you want to eat?
+**Terserah**.
+It just keeps going like that until we end up eating raw potatoes.
 
-When I asks, *"Mau makan apa?"*, and my GF responds with *"Terserah"* (Whatever), classical logic assumes an open, unconstrained solution space. In practice, however, *"Terserah"* acts as an unvoiced rejection filter:
+Or in mathematical terms:
 
 <p data-sourcepos="38:1-40:2" dir="auto" style="text-align: center;">
   <math-renderer class="js-display-math" style="display: block; text-align: center;" data-run-id="7c5a276762474ebbb9f5dcdc855ec221" data-catalyst="">
