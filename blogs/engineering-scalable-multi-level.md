@@ -310,7 +310,7 @@ Where:
 
 ### 3.2 Bottom-Up Roll-Up Sequence
 
-The post-order cost resolution evaluates leaf nodes first and aggregates upward to guarantee zero uncalculated dependencies:
+The system will calculate from the outermost leaf nodes (the smallest parts) before the results are summed up into larger groups.The goal is so the computer does not miss calculating if there is a small part that does not have a price yet (0 / null).
 
 ```mermaid
 sequenceDiagram
@@ -340,7 +340,8 @@ sequenceDiagram
 
 ### 3.3 High-Performance Post-Order CTE Traversal
 
-The naive recursive aggregation across deep BOMs locks database transaction engines. By executing the calculation across topologically sorted levels, we avoid locking contention and ensure determinism:
+The problem is that if we force the database to look up the product genealogy using recursive queries, the database can get locked because the workload is heavy.
+That is why to prevent it from stalling, we structure the calculation hierarchically from bottom to top.
 
 ```sql
 WITH RECURSIVE bom_traversal AS (
@@ -389,9 +390,7 @@ ORDER BY bt.depth_level DESC;
 
 ## 4. Architectural Mitigation of Relational Query Bottlenecks
 
-In enterprise environments with over $500,000$ active SKUs and complex BOM depths exceeding 8 levels, recursive relational queries across shared transactional tables trigger row-level lock contention and degraded throughput.
-
-To achieve real-time calculation targets ($<250\text{ ms}$ quoting latency), the operational layer must be decoupled from the calculation engine:
+If a factory has hundreds of thousands of items, then structures them up to 8 levels down, this will stall. We can actually provide a quotation in less than a second. The requirement is that the calculation must be separated from the manufacturing daily work records so it does not become a burden.
 
 ```mermaid
 flowchart TD
