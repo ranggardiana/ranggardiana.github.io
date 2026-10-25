@@ -35,6 +35,7 @@ This happens because
 
 ### Solving the "Terserah" Paradoxfor Date-Night Decision Deadlock
 WELCOME TO HACKTOBER FEST YEAY!!
+
 In Indonesian dating culture, there is the "Terserah" Paradox.
 So basically, I ask my girlfriend, what do you want to eat?
 **Terserah**.
@@ -67,3 +68,5 @@ Or in mathematical terms:
     </math>
   </math-renderer>
 </p>
+
+[![See Pitchdeck](https://img.shields.io/badge/See-Pitchdeck-brightgreen?style=for-the-badge)](https://github.com/ranggardiana/ranggardiana.github.io/blob/main/blogs/engineering-scalable-multi-level.md)
