@@ -101,15 +101,17 @@ The arrangement structure of goods (Bill of Materials) is actually similar to a 
 
 THe BOM be defined as a directed graph $G = (V, E)$, where:
 
-* $V = \{v_1, v_2, \dots, v_n\}$ represents the set of inventory entities (raw items, purchased parts, fabricated sub-assemblies, finished goods).
-* $E = \{(u, v) \in V \times V\}$ represents the directed edge indicating that component $v$ is a direct child required to construct parent $u$.
-* Each edge $e = (u, v)$ carries an attribute vector $\mathbf{w}_{uv} = \langle q_{uv}, s_{uv}, \text{scrap\_type} \rangle$, denoting required net quantity $q_{uv}$ and expected scrap shrinkage factor $s_{uv} \in [0, 1)$.
+* $V = \{v_1, v_2, \dots, v_n\}$ (Collect all parts in storage, from raw materials, mill finish, to finished goods (finished goods are usually almost non-existent)).
+* $E = \{(u, v) \in V \times V\}$ (Assembly directional pointers where smaller parts are mounted toward larger materials wherecomponent $v$ is a direct child required to construct parent $u$).
+* Each edge $e = (u, v)$ carries an attribute vector $\mathbf{w}\_{uv} = \langle q\_{uv}, s\_{uv}, \text{scrap type} \rangle$, denoting required net quantity $q\_{uv}$ and expected scrap shrinkage factor $s\_{uv} \in [0, 1)$ or simply each connection is given an important note, such as how many units are needed, or what percentage is required depending on the leftover scrap offcuts.
 
 A strict condition of physical assembly trees is acyclicity:
 
 $$
 \forall v_i \in V, \quad \nexists \text{ path } v_i \leadsto v_i \quad (\text{i.e., } G \text{ contains no directed cycles}).
 $$
+
+*lol thanks AI, help me formulating this complex things in my mind, next time the formulation I will generate by AI but I ensure the formula is represent my intention. also I hope you understand my mindmap :D
 
 Below is a visual representation of a typical custom architectural assembly modeled as a DAG:
 
@@ -153,7 +155,7 @@ graph TD
 
 ### 2.2 Relational Entity-Relationship Diagram (ERD)
 
-To achieve microsecond OLTP writes alongside deep analytical hierarchy reads, we implement a **Hybrid Adjacency and Path-Materialized Schema**:
+With that, the hope is to be able to record or update new spare part data quickly. Aside from that, it is also expected to be able to read the genealogical sequence of the goods arrangement from top to bottom without worrying about the system freezing. it can be implemented like:
 
 ```mermaid
 erDiagram
@@ -274,7 +276,8 @@ CREATE INDEX idx_bom_closure_descendant ON mfg_bom_closure(descendant_item_id);
 
 ## 3. The Dynamic Cost Roll-Up Algorithm
 
-Calculating the precision cost of a customized top-level assembly requires resolving dependencies bottom-up (post-order traversal). A sub-assembly's standard cost is the aggregated sum of its direct materials (including operational drop/scrap factors) plus operational transformations (direct labor, machine depreciation, setup amortization, and factory overhead).
+To know the true cost of a custom order, the computer can first calculate the smallest spare parts, add the processing costs, and sum them upward once the sub-assemblies are calculated.
+AI, do your magic by creating the formula:
 
 ### 3.1 Mathematical Cost Formulation
 
